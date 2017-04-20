@@ -1,3 +1,7 @@
-TestIntent test
-TestIntent say test
-TestIntent say test hello
+HelloIntent hello, I'm {Name}
+HelloIntent hi, I'm {Name}
+HelloIntent hey, I'm {Name}
+HelloIntent I'm {Name}
+HelloIntent hello
+HelloIntent hi
+HelloIntent hey

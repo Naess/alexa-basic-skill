@@ -11,7 +11,7 @@ var handlers = {
     'LaunchRequest': function () {
         this.emit('AskSayHello');
     },
-    'TestIntent': function () {
+    'HelloIntent': function () {
         this.emit('SayHello')
     },
     'SayHello': function () {
@@ -34,8 +34,8 @@ var handlers = {
         this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech']);
     },
     'AMAZON.HelpIntent': function () {
-        this.attributes['speechOutput'] = 'You can say hello and then your name. Or you can say exit...so will you tell me your name?';
-        this.attributes['repromptSpeech'] = 'will you tell me your name?';
+        this.attributes['speechOutput'] = 'You can say hello and and tell me your name. Or you can say exit...so will you tell me your name?';
+        this.attributes['repromptSpeech'] = 'Will you tell me your name?';
         this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech']);
     },
     'AMAZON.RepeatIntent': function () {
@@ -51,8 +51,8 @@ var handlers = {
         this.emit(':tell', 'Goodbye.');
     },
     'Unhandled': function () {
-      this.attributes['speechOutput'] = 'You can say hello and then your name. Or you can say exit...so will you tell me your name?';
-      this.attributes['repromptSpeech'] = 'will you tell me your name?';
+      this.attributes['speechOutput'] = 'You can say hello and and tell me your name. Or you can say exit...so will you tell me your name?';
+      this.attributes['repromptSpeech'] = 'Will you tell me your name?';
       this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech']);
     }
 };
